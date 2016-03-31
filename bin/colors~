@@ -1,0 +1,36 @@
+#!/bin/zsh
+# Original Posted at http://crunchbang.org/forums/viewtopic.php?pid=126921%23p126921#p126921
+# [ESC] character in original post removed here.
+
+initializeANSI()
+{
+ esc="$(echo -en '\e')"
+
+  bf="${esc}[30m";   rf="${esc}[31m";    gf="${esc}[32m";
+  yf="${esc}[33m"   blf="${esc}[34m";   pf="${esc}[35m";
+  cf="${esc}[36m";    wf="${esc}[37m";
+
+  bb="${esc}[40m";   rb="${esc}[41m";    gb="${esc}[42m";
+  yb="${esc}[43m";   blb="${esc}[44m";   pb="${esc}[45m";
+  cb="${esc}[46m";    wb="${esc}[47m";
+
+  b="${esc}[1m";    bff="${esc}[22m"
+  i="${esc}[3m"; ioff="${esc}[23m"
+  u="${esc}[4m";      uff="${esc}[24m"
+  inv="${esc}[7m";     invf="${esc}[27m"
+
+  reset="${esc}[0m"
+}
+
+  
+initializeANSI
+
+cat << EOF
+
+      ${rf}██     ${gf}█████  ${yf}██  ██ ${blf}█████ ${pf}█████  ${cf}█████
+      ${rf}████   ${gf}██  ██ ${yf}██  ██ ${blf}██    ${pf}██  ██ ${cf}██  ██
+      ${b}${rf}██     ${b}${gf}██████ ${b}${yf}██  ██ ${b}${blf}████  ${b}${pf}██████ ${b}${cf}██  ██
+      ${b}${rf}██████ ${b}${gf}██  ██ ${b}${yf}█████  ${b}${blf}██    ${b}${pf}██  ██ ${b}${cf}██  ██  
+
+
+EOF

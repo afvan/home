@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Copia de seguridad
+
+FILE=/home/littleboy/backup/backup_`uname -n`_`date +%m%d%y`.tgz
+
+# Comprime directorios importantes
+tar czf $FILE -X /home/littleboy/.exclude /home/littleboy  > /dev/null
+
+echo Copia realida en $FILE
